@@ -1,0 +1,99 @@
+.card {
+  position: relative;
+  margin: 1.5rem auto; /* Space around the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ffffff, #f3f4f6);
+  overflow: hidden;
+  max-width: 450px;
+  opacity: 0; /* Start hidden */
+  transform: translateX(-100%); /* Slide in from left */
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(188, 85, 85, 0.2);
+  border-color: #5CDB95; /* Adds a green glow effect on hover */
+}
+
+.card.slide-in {
+  opacity: 1;
+  transform: translateX(0); /* Slide to original position */
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #05386B; /* Dark blue for headings */
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.card button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #55a443; /* Light green for buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card button:hover {
+  background-color: #6aabc2; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.02); /* Subtle zoom effect on hover */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, rgba(110, 150, 128, 0.15), rgba(55, 56, 55, 0));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1; /* Adds a gradient overlay effect on hover */
+}
+
+/* Additional styles for the flight details display */
+.flight-cards {
+  display: flex; /* Enables flexbox layout */
+  flex-wrap: wrap; /* Allows wrapping of cards */
+  justify-content: center; /* Centers cards horizontally */
+  gap: 0.5rem; /* Reduced spacing between cards */
+}
+
+.flight-card {
+  margin: 0.5rem; /* Small margin around each card */
+}
+
+
+ 

@@ -1,0 +1,126 @@
+/* Background styling */
+.create-airline-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../shared/Images/293397.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%);
+    transition: filter 0.5s ease;
+}
+
+/* Main box container */
+.create-airline-box {
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent background */
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(245, 239, 239, 0.2);
+    margin-top: 60px;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideIn 0.6s ease-out forwards;
+    border: 2px solid #1e3a8a; /* Blue border */
+}
+
+/* Slide-in effect */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Heading styling */
+h2 {
+    color: #1e3a8a;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Form styling */
+.create-airline-box form {
+    margin-bottom: 1.5rem;
+}
+
+/* Input fields styling */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.7); /* Slight transparency */
+}
+
+/* Input focus effect */
+.input-field:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 10px rgba(30, 58, 138, 0.5); /* Blue glow */
+    outline: none;
+}
+
+/* Create button styling (smaller button) */
+.create-button {
+    background-color: #1e3a8a; /* Deep blue background */
+    border: none;
+    color: white;
+    padding: 8px 16px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    border-radius: 8px;
+    width: auto; /* Reduced width */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.create-button:hover {
+    background-color: #0d2852;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Success message styling */
+.success-message {
+    color: #28a745; /* Green success text */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Error message styling */
+.error-message {
+    color: #bd1e51; /* Red error text */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .create-airline-box {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .create-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}

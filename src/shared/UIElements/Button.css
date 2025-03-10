@@ -1,0 +1,36 @@
+.button {
+  padding: 15px 30px; /* Increased padding for larger button size */
+  background-color: #007bff; /* Blue background color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 16px; /* Slightly larger rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  display: inline-flex; /* Use flex for horizontal alignment */
+  justify-content: center; /* Center the content */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text */
+  font-size: 1.em; /* Increase font size */
+}
+
+/* Button states */
+.button--inverse {
+  background-color: white; /* Inverse button color */
+  color: #007bff; /* Blue text color */
+}
+
+.button--danger {
+  background-color: red; /* Danger button color */
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Horizontal box for buttons */
+.button-container {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the buttons */
+  gap: 15px; /* Increased space between buttons */
+}

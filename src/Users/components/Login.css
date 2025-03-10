@@ -1,0 +1,144 @@
+/* Background styling */
+.auth-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../shared/Images/293397.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(80%);
+    transition: filter 0.5s ease;
+}
+
+/* Login box styling */
+.authentication {
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 12px 24px rgba(245, 239, 239, 0.2); /* Soft shadow */
+    margin-top: 60px;
+    text-align: center;
+    z-index: 10; /* Ensures it appears above the background */
+    position: relative;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideIn 0.6s ease-out forwards; /* Slide-in effect */
+    border: 2px solid #1e3a8a; /* Blue border */
+}
+
+/* Slide-in effect */
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header styling */
+.authentication h2 {
+    color: #1e3a8a; /* Deep blue color */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Form styling */
+.authentication form {
+    margin-bottom: 1.5rem;
+}
+
+/* Input fields styling */
+.authentication input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Smooth transition on focus */
+    background-color: rgba(255, 255, 255, 0.7); /* Slight transparency */
+}
+
+/* Input focus effect */
+.authentication input:focus {
+    border-color: #1e3a8a; /* Blue border on focus */
+    box-shadow: 0 0 10px rgba(30, 58, 138, 0.5); /* Blue glow */
+    outline: none;
+}
+
+/* Login button styling */
+.button {
+    background-color: #1e3a8a; /* Deep blue background */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #0d2852; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Toggle button styling */
+.toggle-btn {
+    background-color: transparent;
+    border: 2px solid #1e3a8a; /* Blue border */
+    color: #1e3a8a; /* Blue text */
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #1e3a8a; /* Blue background on hover */
+    color: white; /* White text on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Link styling */
+.authentication p a {
+    color: #1e3a8a; /* Blue link */
+    text-decoration: none;
+}
+
+.authentication p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Error text styling */
+.error-text {
+    color: #bd1e51; /* Deep pink error text */
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Success text styling */
+.success-text {
+    color: #28a745; /* Green success text */
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Animation for background change */
+.auth-background:hover {
+    filter: brightness(100%); /* Brighten the background on hover */
+    transition: filter 0.5s ease;
+}

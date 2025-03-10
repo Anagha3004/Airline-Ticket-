@@ -1,0 +1,95 @@
+/* Apply background to the entire screen for FlightDetails */
+.flight-details-page {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../shared/Images/293397.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(80%);
+    transition: filter 0.5s ease;
+}
+
+/* Container for the entire flight details page */
+.flight-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center align content horizontally */
+    justify-content: center; /* Center align content vertically */
+    text-align: center; /* Center align text */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent white background */
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 80%;
+    max-width: 900px;
+    z-index: 10; /* Ensure it appears above the background */
+}
+
+/* Title styling */
+.flight-details-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for the flight info section */
+.flight-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.flight-info p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Strong styling for the labels */
+.flight-info strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styling for the "Book Ticket" button */
+.flight-details-container button {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.flight-details-container button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    /* Adjusting grid layout for smaller screens */
+    .flight-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust button padding */
+    .flight-details-container button {
+        padding: 12px 20px;
+    }
+}
+
+/* Hover effect for background brightness */
+.flight-details-page:hover {
+    filter: brightness(100%);
+    transition: filter 0.5s ease;
+}

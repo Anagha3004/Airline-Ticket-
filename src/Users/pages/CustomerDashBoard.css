@@ -1,0 +1,62 @@
+/* src/components/CustomerDashboard.css */
+
+.dashboard-container {
+    background-image: url('../../shared/Images/293397.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Top bar positioning */
+.top-bar-container {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Optional translucent background */
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Styling for the heading */
+.dashboard-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 60px; /* Extra space to prevent overlap with top bar */
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Styling for the paragraph */
+.dashboard-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f0f0f0;
+    max-width: 600px;
+}
+
+/* Style for the button */
+.dashboard-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.dashboard-button:hover {
+    background-color: #45a049;
+}

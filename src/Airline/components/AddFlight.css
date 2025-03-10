@@ -1,0 +1,196 @@
+/* Centering the main container */
+.add-flight-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../shared/Images/293397.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+/* Main box styling */
+.add-flight-box {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Title styling */
+.add-flight-title {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Message styling */
+.message {
+    font-size: 1rem;
+    color: green;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Form styling */
+.add-flight-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.flight-data-container, .flight-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.flight-data-item, .flight-details-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.flight-data-item label, .flight-details-item label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.flight-data-item input, .flight-details-item input, .flight-details-item select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+/* Input and select focus styling */
+.flight-data-item input:focus, .flight-details-item input:focus, .flight-details-item select:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 8px rgba(30, 58, 138, 0.2);
+    outline: none;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #163772;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .add-flight-box {
+        padding: 1.5rem;
+    }
+
+    .add-flight-title {
+        font-size: 1.75rem;
+    }
+}
+
+
+
+/* AddFlight.css */
+
+.add-flight-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.add-flight-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-flight-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.message {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Ensure input and select elements are consistent in size */
+.flight-data-item, .flight-details-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.flight-data-item input,
+.flight-details-item input,
+.flight-details-item select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Adjust labels for spacing */
+.flight-data-item label,
+.flight-details-item label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

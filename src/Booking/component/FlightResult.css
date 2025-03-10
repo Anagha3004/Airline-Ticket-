@@ -1,0 +1,111 @@
+/* FlightResult.css */
+
+/* Background Image for the Screen */
+body {
+  background-image: url('path/to/your/background-image.jpg'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for Flight Results */
+.flight-results-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Slight white background for contrast */
+  border-radius: 8px;
+  margin-top: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for the Flight Results */
+.flight-results-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Message when no flights are found */
+.no-flights-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Container for the flight cards */
+.flight-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Individual Flight Card */
+.flight-card {
+  width: 30%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Airline Name */
+.flight-airline {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Flight Information */
+.flight-info {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.flight-info span {
+  font-weight: bold;
+}
+
+/* Flight Price */
+.flight-price {
+  font-size: 1.2rem;
+  color: #28a745; /* Green for prices */
+  margin-bottom: 15px;
+}
+
+/* Booking Button */
+.book-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-button:hover {
+  background-color: #45a049;
+}
+
+/* Additional Styling for Mobile */
+@media (max-width: 768px) {
+  .flight-card {
+      width: 100%;
+  }
+}

@@ -1,0 +1,241 @@
+/* Slideshow Section */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust this height based on your design */
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Available Flights Button */
+  .overlay {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .view-flights-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .view-flights-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Flights List */
+  .flights-list {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center; /* Center-align the flights list */
+  }
+  
+  .flight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .flight-card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .flight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Enlarge Card on Click */
+  .flight-card:active {
+    transform: scale(1.1);
+  }
+  
+  .flight-card h3 {
+    margin-top: 0;
+  }
+  
+  .flight-card p {
+    margin: 8px 0;
+  }
+  
+  /* Customer Reviews Section */
+  .user-reviews {
+    background-color: #e9ecef;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .review-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .rating {
+    font-size: 20px;
+    color: gold;
+  }
+  
+  .star {
+    font-size: 20px;
+  }
+  
+  .star.filled {
+    color: gold;
+  }
+  
+  /* Footer Section */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    font-size: 14px;
+  }
+  
+  /* Contact Information Section */
+  .contact-info {
+    padding: 40px;
+    background-color: #f8f9fa; /* Changed to a neutral color */
+    color: #333;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
+  
+  .contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .contact-info ul li a {
+    color: #131314;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info ul li a:hover {
+    color: #111111;
+  }
+/* Flight Card Styles */
+.flight-card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure content doesn't overflow when card transforms */
+    transform-style: preserve-3d; /* Enable 3D transformations */
+  }
+  
+  /* Hover effect: make card move towards the screen */
+  .flight-card:hover {
+    transform: translateY(-10px) scale(1.05) perspective(500px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow to emphasize the effect */
+  }
+  
+  /* Active state (during click) to give feedback */
+  .flight-card:active {
+    transform: scale(1.05) translateY(0) rotateX(0); /* Reset transformation on click */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Lighter shadow for click feedback */
+  }
+  
+  /* Optional: Adding a small transition delay to give the effect more life */
+  .flight-card:hover {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  
+  /* Card Content */
+  .flight-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .flight-card p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .flight-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
